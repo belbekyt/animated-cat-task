@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Cats</title>
+
+    <!-- JQuery and Google Fonts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Css -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- JavaScript -->
+    <script src="js/menu.js" defer></script>
+    <script src="js/cursor.js" defer></script>
+    <script src="js/cat3.js" defer></script>
+    <script src="js/cat4.js" defer></script>
+</head>
+<body>
+    <!-- Menu -->
+    <section class="menu" id="menu-card">
+        <div class="cursor" id="animate-cursor"></div>
+        <h1>Welocome to the Cat App</h1>
+        <div>
+            <p class="first-li" id="li1">Cat</p>
+            <p class="second-li" id="li2">Cat in the mug</p>
+            <p class="third-li" id="li3">Following eyes</p>
+            <p class="fourth-li" id="li4">Light switch</p>
+        </div>
+        <p class="author">Created by Miłosz Pawłowski</p>
+    </section>
+
+    <section class="cat cat-room1" id="cat1">CAT 1</section>
+
+    <section class="cat cat-room2" id="cat2">CAT 2</section>
+
+    <section class="cat cat-room3" id="cat3">
+        <div class="moving-bg" id="module">
+            <div class="mouse" id="mouse">  
+        </div>
+        <img id="base" class="kitty-image" src="photo/cat.png" alt="Sweet kitty">
+        <img id="eye1-move" class="eyess eye1-moving" src="photo/eye.png" alt="cat eye">
+        <img id="eye2-move" class="eyess eye2-moving" src="photo/eye.png" alt="cat eye">
+    </section>
+
+    <!-- CAT 4 -->
+    <section class="cat cat-room4" id="cat4">
+        <div class="cable"></div>
+        <div class="light-box"></div>
+        <div class="light-bulb"></div>
+        <div class="floor"></div>
+        <div class="head">
+            <div class="ear1"></div>
+            <div class="ear2"></div>
+            <div class="nose"></div>
+            <div class="body1"></div>
+            <div class="mouth" id="cat-mouth"></div>
+            <div class="body2"></div>
+            <div class="foot1"></div>
+            <div class="foot2"></div>
+        </div>
+        <div class="main-shadow" id="room-shadow"></div>
+        <div class="eye1" id="first-eye"></div>
+        <div class="eye2" id="second-eye"></div>
+        <button class="light-switch" id="cat4-btn">Click to switch light</button>
+    </section>
+</body>
+</html>

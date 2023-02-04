@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    overflow: hidden;
+    cursor: none;
+}
+
+.cat{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+}
+
+@import 'menu';
+@import 'cursor';
+@import 'cat4';
+@import 'cat3';
