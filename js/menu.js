@@ -2,83 +2,63 @@
 const firstLi = $('#li1');
 const secondLi = $('#li2');
 const thirdLi = $('#li3');
-const fourthLi = $('#li4');
 
-const cat1 = $('#cat1');
-const cat2 = $('#cat2');
-const cat3 = $('#cat3');
-const cat4 = $('#cat4');
+const allLinks = [firstLi, secondLi, thirdLi];
 
-const eye1 = $("#first-eye");
-const eye2 = $("#second-eye");
-
-const menuCard = $('#menu-card');
-
-const allLinks = [firstLi, secondLi, thirdLi, fourthLi];
-
-//Onload menu animation
-$(document).ready(() => {
+const showMenu = () => {
     firstLi.animate({
-        top: '39%',
-        left: '50%'
-    }, 600)
-
-    secondLi.animate({
         top:'45%',
         left: '50%'
     }, 850)
 
-    thirdLi.animate({
+    secondLi.animate({
         top:'51%',
         left: '50%'
     }, 1100)
 
-    fourthLi.animate({
+    thirdLi.animate({
         top:'57%',
         left: '50%'
     }, 1320)
+}
+
+//Onload menu animation
+$(document).ready(() => {
+    showMenu();
 })
 
 //menu handler
 const showItem = (id) => {
     switch(id){
         case 'li1':
-            cat1.css('z-index', '5');
+            $('#cat1').css('z-index', '5');
             break;
         case 'li2':
-            cat2.css('z-index', '5');
+            $('#cat2').css('z-index', '5');
             break;
         case 'li3':
-            cat3.css('z-index', '5');
-            break;
-        case 'li4':
-            eye1.addClass('animated');
-            eye2.addClass('animated');
-            cat4.css('z-index', '5');
+            $("#first-eye").addClass('animated');
+            $("#second-eye").addClass('animated');
+            $('#cat3').css('z-index', '5');
             break;
     }
 
-    menuCard.animate({
-        marginTop: '-200%'
-    }, 1250);
+    $('#menu-card').animate({
+        marginTop: '-100%'
+    }, 800);
 
     firstLi.animate({
-        top: '-10%',
-        left: '30%'
+        top: '55%',
+        left: '-40%'
     }, 200)
 
     secondLi.animate({
-        top: '55%',
-        left: '-10%'
-    }, 200)
-
-    thirdLi.animate({
         top: '61%',
         left: '110%'
     }, 200)
 
-    fourthLi.animate({
-        top: '110%',
+    thirdLi.animate({
+        top: '-20%',
         left: '40%'
     }, 200)
 }
@@ -88,3 +68,18 @@ allLinks.forEach(element => {
         showItem(e.target.id);
     })
 });
+
+$('#menu-show').click(() => {
+    $('#menu-card').animate({
+        marginTop: '0'
+    }, 600, () => {
+        $('#cat1').css('z-index', '0');
+        $('#cat2').css('z-index', '0');
+        $("#first-eye").removeClass('animated');
+        $("#second-eye").removeClass('animated');
+        $('#cat3').css('z-index', '0');
+        $('#cat1-mug').removeClass('cat1-animated-mug');
+        $('#cat1-cat').removeClass('cat1-animated-cat');
+        showMenu();
+    });
+})

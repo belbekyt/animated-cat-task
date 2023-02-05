@@ -1,9 +1,15 @@
 <!DOCTYPE html>
-<html lang="pl-PL">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site with three cute animated kitties. Let's play with them!">
+    <meta name="keywords" content="animated kitties, cute cats, beautiful cats, animated cats" >
+    <meta name="robots" content="follow">
+    <meta name="robots" content="index">
+    <meta name="author" content="Miłosz Pawłowski">
+
     <title>Animated Cats</title>
 
     <!-- JQuery and Google Fonts -->
@@ -18,8 +24,9 @@
     <!-- JavaScript -->
     <script src="js/menu.js" defer></script>
     <script src="js/cursor.js" defer></script>
+    <script src="js/cat1.js" defer></script>
+    <script src="js/cat2.js" defer></script>
     <script src="js/cat3.js" defer></script>
-    <script src="js/cat4.js" defer></script>
 </head>
 <body>
     <!-- Menu -->
@@ -27,29 +34,39 @@
         <div class="cursor" id="animate-cursor"></div>
         <h1>Welocome to the Cat App</h1>
         <div>
-            <p class="first-li" id="li1">Cat</p>
-            <p class="second-li" id="li2">Cat in the mug</p>
-            <p class="third-li" id="li3">Following eyes</p>
-            <p class="fourth-li" id="li4">Light switch</p>
+            <p class="second-li" id="li1">Cat in the mug</p>
+            <p class="third-li" id="li2">Following eyes</p>
+            <p class="fourth-li" id="li3">Light switch</p>
         </div>
         <p class="author">Created by Miłosz Pawłowski</p>
     </section>
 
-    <section class="cat cat-room1" id="cat1">CAT 1</section>
+    <!-- Show menu button -->
+    <button id="menu-show" class="show-menu">MENU</button>
 
-    <section class="cat cat-room2" id="cat2">CAT 2</section>
-
-    <section class="cat cat-room3" id="cat3">
-        <div class="moving-bg" id="module">
-            <div class="mouse" id="mouse">  
+    <!-- First cat section -->
+    <div id="cat1" class="cat cat-room1">
+        <img id="cat1-cat" class="cat1-cat" src="photo/cat1.png" alt="First cat">
+        <img id="cat1-mug" class="cat1-mug" src="photo/mug2.png" alt="Red mug">
+        <div>
+            <button id="cat1-reset" class="cat1-button1">Reset</button>
+            <button id="cat1-start" class="cat1-button2">Start</button>
         </div>
-        <img id="base" class="kitty-image" src="photo/cat.png" alt="Sweet kitty">
-        <img id="eye1-move" class="eyess eye1-moving" src="photo/eye.png" alt="cat eye">
-        <img id="eye2-move" class="eyess eye2-moving" src="photo/eye.png" alt="cat eye">
-    </section>
+    </div>
 
-    <!-- CAT 4 -->
-    <section class="cat cat-room4" id="cat4">
+    <!-- Second cat section -->
+    <div id="cat2" class="cat cat-room2">
+        <div id="module" class="cat2-moving-bg">
+            <div id="mouse">
+                <img id="base" class="kitty-image" src="photo/cat2.png" alt="Sweet kitty">
+                <img id="cat2-eye1" class="eyes eye1-moving" src="photo/eye.png" alt="cat eye">
+                <img id="cat2-eye2" class="eyes eye2-moving" src="photo/eye.png" alt="cat eye">
+            </div>
+        </div>
+    </div>
+
+    <!-- Third cat section -->
+    <div id="cat3" class="cat cat-room3">
         <div class="cable"></div>
         <div class="light-box"></div>
         <div class="light-bulb"></div>
@@ -59,15 +76,15 @@
             <div class="ear2"></div>
             <div class="nose"></div>
             <div class="body1"></div>
-            <div class="mouth" id="cat-mouth"></div>
+            <div id="cat-mouth" class="mouth"></div>
             <div class="body2"></div>
             <div class="foot1"></div>
             <div class="foot2"></div>
         </div>
-        <div class="main-shadow" id="room-shadow"></div>
-        <div class="eye1" id="first-eye"></div>
-        <div class="eye2" id="second-eye"></div>
-        <button class="light-switch" id="cat4-btn">Click to switch light</button>
-    </section>
+        <div id="room-shadow" class="main-shadow"></div>
+        <div id="first-eye" class="cat3-eye1"></div>
+        <div id="second-eye" class="cat3-eye2"></div>
+        <button id="cat3-btn" class="light-switch">Click to switch light</button>
+    </div>
 </body>
 </html>

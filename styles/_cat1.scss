@@ -1,0 +1,133 @@
+.cat-room1{
+    background-image: url(../photo/room1.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    button{
+        position: absolute;
+        bottom: 1.5rem;
+        border: 2px solid white;
+        border-radius: 18px;
+        width: 150px;
+        height: 36px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        background-color: rgba(0,0,0, 0.3);
+        color: white;
+        transition: .4s;
+        cursor: none;
+
+        &:hover{
+            background-color: white;
+            color: black;
+        }
+    }
+}
+
+.cat1-button1{
+    transform: translate(-160px);
+}
+
+.cat1-button2{
+    transform: translate(60px);
+}
+
+.cat1-cat{
+    position: absolute;
+    width: 420px;
+    bottom: 485px;
+    margin-bottom: -120px;  
+    left:40%;
+}
+
+.cat1-mug{
+    position: absolute;
+    width: 270px;
+    bottom: 210px;
+    margin-left: 12px;
+    left:43.6%;
+}
+
+.cat1-animated-mug{
+    transition: 1.5s;
+    transform: rotate(-90deg);
+}
+
+.cat1-animated-cat{
+    transition: 3s;
+    transform: rotate(-720deg);
+    left: 0%;
+    bottom: 0;
+}
+
+@media screen and (max-width: 1600px) {
+    .cat1-cat{
+        left:39%
+    }
+}
+@media screen and (max-width: 1400px) {
+    .cat1-cat{
+        left:38.5%
+    }
+}
+@media screen and (max-width: 1200px) {
+    .cat1-cat{
+        left:37.6%
+    }
+}
+@media screen and (max-width: 1000px) {
+    .cat1-cat{
+        left:36.5%
+    }
+}
+@media screen and (max-width: 800px) {
+    .cat1-cat{
+        left:35%
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .cat1-cat{
+        left:31.5%
+    }
+}
+@media screen and (max-width: 500px) {
+    .cat1-cat{
+        left:30%
+    }
+}
+@media screen and (max-width: 400px) {
+    .cat1-cat{
+        left:28%
+    }
+}
+@media screen and (max-height: 750px) {
+    .cat1-cat{
+        bottom: 420px;
+    }
+
+    .cat1-mug{
+        bottom: 140px;
+    }
+}
+@media screen and (max-height: 600px) {
+    .cat1-cat{
+        bottom: 340px;
+    }
+
+    .cat1-mug{
+        bottom: 50px;
+    }
+}
+@media screen and (max-height: 500px) {
+    .cat1-cat{
+        bottom: 290px;
+    }
+
+    .cat1-mug{
+        bottom: 0;
+    }
+}

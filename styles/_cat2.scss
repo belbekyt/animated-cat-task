@@ -1,0 +1,103 @@
+.cat-room2{
+    background-color: white;
+    padding: 1000px;
+}
+
+.kitty-image{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 0;
+    transition: .5s;
+    width: 500px;
+    height: 700px;
+
+    &:hover{
+        bottom: -70px;
+    }
+}
+
+.eye1-moving, .eye2-moving{
+    position: absolute;
+    height: 5%;
+}
+
+.cat2-moving-bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../photo/room2.png');
+    background-position: center;
+    background-size: cover;
+}
+
+@media screen and (max-width:1400px) {
+    .kitty-image{
+        width: 393px;
+        height: 550px;
+    }
+
+    .kitty-image:hover ~ .eye1-moving{
+        bottom: 325px;
+    }
+    
+    .kitty-image:hover ~ .eye2-moving{
+        bottom: 350px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .kitty-image{
+        width: 321px;
+        height: 450px;
+    }
+
+    .eye1-moving, .eye2-moving{
+        height: 4%;
+    }
+
+    .eye1-moving{
+        bottom: 325px;
+    }
+
+    .eye2-moving{
+        bottom: 345px;
+    }
+
+    .kitty-image:hover ~ .eye1-moving{
+        bottom: 325px;
+    }
+    
+    .kitty-image:hover ~ .eye2-moving{
+        bottom: 350px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .kitty-image{
+        width: 250px;
+        height: 350px;
+    }
+
+    .eye1-moving, .eye2-moving{
+        height: 3%;
+    }
+
+    .eye1-moving{
+        bottom: 250px;
+    }
+
+    .eye2-moving{
+        bottom: 267px;
+    }
+
+    .kitty-image:hover ~ .eye1-moving{
+        bottom: 180px;
+    }
+    
+    .kitty-image:hover ~ .eye2-moving{
+        bottom: 197px;
+    }
+}
