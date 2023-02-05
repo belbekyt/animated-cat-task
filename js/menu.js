@@ -44,7 +44,7 @@ const showItem = (id) => {
     }
 
     $('#menu-card').animate({
-        marginTop: '-100%'
+        marginTop: '-200%'
     }, 800);
 
     firstLi.animate({
