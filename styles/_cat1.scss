@@ -56,13 +56,6 @@
     transform: rotate(-90deg);
 }
 
-.cat1-animated-cat{
-    transition: 3s;
-    transform: rotate(-720deg);
-    left: 0%;
-    bottom: 0;
-}
-
 @media screen and (max-width: 1600px) {
     .cat1-cat{
         left:39%
@@ -130,4 +123,11 @@
     .cat1-mug{
         bottom: 0;
     }
+}
+
+.cat1-animated-cat{
+    transition: 3s;
+    transform: rotate(-720deg);
+    left: 0%;
+    bottom: 0;
 }
